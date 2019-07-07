@@ -1,0 +1,25 @@
+﻿<Border x:Class="UserControlLinkage.Views.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:UserControlLinkage.Views"
+        xmlns:viewmodels="clr-namespace:UserControlLinkage.ViewModels"
+        mc:Ignorable="d" 
+        BorderBrush="Black"
+        BorderThickness="0,0,1,0"
+        Background="GreenYellow"
+        d:DesignHeight="400" d:DesignWidth="100">
+
+    <Border.DataContext>
+        <viewmodels:MenuViewModel/>
+    </Border.DataContext>
+    
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Content="メニュー１" Margin="5" Command="{Binding Menu1Command, Mode=OneWay}"/>
+            <Button Content="メニュー２" Margin="5" Command="{Binding Menu2Command, Mode=OneWay}"/>
+            <Button Content="メニュー３" Margin="5" Command="{Binding Menu3Command, Mode=OneWay}"/>
+        </StackPanel>  
+    </Grid>
+</Border>
